@@ -7,11 +7,11 @@ let what = ['my homework', 'my phone', 'the car'];
 let when = ['before the class', 'when I was sleeping', 'while I was exercising', 'during my lunch', 'while I was praying'];
 
 function  excuseGenerator(array){
-  let nroRandom = Math.floor(Math.random() * array.length);
- return array[nroRandom];
+  let wordSelect= Math.floor(Math.random() * array.length);
+ return array[wordSelect];
 }
 
-window.onload = function() {
-   let randomExcuse = excuseGenerator(who) +" "+ excuseGenerator(action) +" "+excuseGenerator(what) +" "+ excuseGenerator(when);
+window.onload = function(){
+   let randomExcuse = $`{excuseGenerator("who")} ${excuseGenerator("action")} ${excuseGenerator("what")} $excuseGenerator("when"}.`;
   document.getElementById("excuse").innerText =randomExcuse;
       };
